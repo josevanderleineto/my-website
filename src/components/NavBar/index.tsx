@@ -73,17 +73,17 @@ export default function NavBar() {
           ></div>
         )}
         <div
-          className={`fixed top-0 left-0 bg-white shadow-lg transform ${
+          className={`fixed top-0 left-0 bg-slate-600 shadow-lg transform ${
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           } transition-transform duration-300 z-50`}
           style={{
-            width: "200px", // Largura mais compacta
-            height: `${items.length * 50}px`, // Altura ajustada para 50px por item
+            width: "200px", // Largura compacta
+            height: `${items.length * 50}px`, // Altura ajustada
           }}
         >
           <button
             onClick={closeMenu}
-            className="text-gray-800 absolute top-4 right-4 focus:outline-none"
+            className="text-gray-200 absolute top-4 right-4 focus:outline-none"
           >
             <svg
               className="w-6 h-6"
@@ -108,8 +108,8 @@ export default function NavBar() {
                 <Link
                   href={item.url}
                   className={`block text-lg font-medium ${
-                    pathname === item.url ? "text-blue-500" : "text-gray-700"
-                  } hover:text-blue-700`}
+                    pathname === item.url ? "text-blue-400" : "text-gray-200"
+                  } hover:text-blue-300`}
                   onClick={closeMenu} // Fecha o menu ao clicar no link
                 >
                   {item.label}
